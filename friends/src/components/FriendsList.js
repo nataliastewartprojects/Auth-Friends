@@ -2,9 +2,10 @@ import React from "react";
 
 // import Loader from "react-loader-spinner"
 import { axiosWithAuth } from "../utils/axiosWithAuth";
-import { Route, useHistory } from "react-router-dom";
+import { Route } from "react-router-dom";
 import AddFriend from "./AddFriend";
 import Item from "./Item";
+// import UpdateForm from "../components/UpdateForm";
 
 class FriendsList extends React.Component {
   state = {
@@ -32,8 +33,13 @@ class FriendsList extends React.Component {
     return (
       <div className="friends-container">
         <Route component={AddFriend} />
-
         <Item friends={this.state.friends} />
+        {/* <Route
+          path="/update-item/:id"
+          component={UpdateForm}
+          friends={this.state.friends}
+          setState={this.setState}
+        /> */}
       </div>
     );
   }

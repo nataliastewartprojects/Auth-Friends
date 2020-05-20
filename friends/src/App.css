@@ -87,9 +87,6 @@ h2 {
 .addForm {
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
-  background-color: rgb(126, 212, 126);
-  border-radius: 10%;
   font-family: "Permanent Marker";
   width: 20%;
   height: 15vh;
@@ -99,4 +96,16 @@ h2 {
   background-color: green;
   color: white;
   border: 1px solid black;
+}
+.wrap-upform {
+  display: flex;
+
+  justify-content: center;
+}
+
+.updateForm {
+  display: flex;
+  flex-direction: column;
+  font-family: "Permanent Marker";
+  width: 30%;
 }
