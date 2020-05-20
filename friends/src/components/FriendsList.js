@@ -2,6 +2,8 @@ import React from "react";
 
 // import Loader from "react-loader-spinner"
 import { axiosWithAuth } from "../utils/axiosWithAuth";
+import { Route } from "react-router-dom";
+import AddFriend from "./AddFriend";
 
 class FriendsList extends React.Component {
   state = {
@@ -37,6 +39,7 @@ class FriendsList extends React.Component {
             </div>
           );
         })}
+        <Route component={AddFriend} />
       </div>
     );
   }
