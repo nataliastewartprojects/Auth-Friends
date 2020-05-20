@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  color: green;
 }
 
 .App-logo {
@@ -21,7 +22,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: green;
 }
 
 .App-link {
@@ -58,7 +59,7 @@ li {
 a {
   text-decoration: none;
   padding: 6px;
-  color: black;
+  color: green;
   font-family: "Permanent Marker", cursive;
 }
 h2 {
@@ -81,4 +82,21 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+}
+
+.addForm {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  background-color: rgb(126, 212, 126);
+  border-radius: 10%;
+  font-family: "Permanent Marker";
+  width: 20%;
+  height: 15vh;
+}
+
+.add-btn {
+  background-color: green;
+  color: white;
+  border: 1px solid black;
 }
