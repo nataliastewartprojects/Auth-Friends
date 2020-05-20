@@ -76,3 +76,9 @@ h2 {
 /* .btn {
   font-family: "Permanent Marker";
 } */
+
+.friends-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}

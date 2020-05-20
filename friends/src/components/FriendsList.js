@@ -18,15 +18,27 @@ class FriendsList extends React.Component {
       .get("/api/friends")
       .then((res) => {
         console.log("FRIENDSLIST RES:", res);
-        // this.setState({
-        //   friends: res.data,
-        // });
+        this.setState({
+          friends: res.data,
+        });
       })
       .catch((err) => console.log("FRIENDSLIST- ERROR", err));
   };
 
   render() {
-    return <div className="friends-container">Hi from FriendsList</div>;
+    return (
+      <div className="friends-container">
+        {this.state.friends.map((item) => {
+          return (
+            <div key={item.id}>
+              <h3>{item.name}</h3>
+              <p>Age: {item.age}</p>
+              <p>Email:{item.email}</p>
+            </div>
+          );
+        })}
+      </div>
+    );
   }
 }
 
