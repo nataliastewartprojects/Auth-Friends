@@ -1,8 +1,10 @@
-import React from "react";
-import { useHistory } from "react-router-dom";
+import React, { useState } from "react";
+import { useHistory, useParams } from "react-router-dom";
+import { axiosWithAuth } from "../utils/axiosWithAuth";
 
 export default function Item(props) {
   const { push } = useHistory();
+
   return (
     <div>
       {props.friends.map((item) => {
@@ -17,7 +19,12 @@ export default function Item(props) {
             >
               Edit
             </button>
-            <button className="md-button">Delete</button>
+            <button
+              onClick={() => props.deleteItem(item.id)}
+              className="md-button"
+            >
+              Delete
+            </button>
           </div>
         );
       })}

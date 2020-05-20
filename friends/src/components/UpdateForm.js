@@ -37,7 +37,7 @@ export default function UpdateForm(props) {
     axiosWithAuth()
       .put(`/api/friends/${id}`, item)
       .then((res) => {
-        console.log("handleSubmit-RES:", res);
+        // console.log("handleSubmit-RES:", res);
         setItem(res.data);
         push(`/protected/`);
       })
